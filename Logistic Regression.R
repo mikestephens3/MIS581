@@ -24,5 +24,3 @@ logit.gain <- gains(valid.df$Near_Failure, predicted, groups=100)
 plot(c(0,logit.gain$cume.pct.of.total*sum(valid.df$Near_Failure)) ~ c(0,logit.gain$cume.obs), 
      xlab="# cases", ylab="Cumulative", main="Lift Chart For Logistic Regression Model", type="l",)
 lines(c(0,sum(valid.df$Near_Failure))~c(0, dim(valid.df)[1]), lty=2)
-
-cutpointr
